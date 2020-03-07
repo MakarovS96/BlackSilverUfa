@@ -19,18 +19,5 @@
 
 <%stats:statistics />
 
-% for category in categories.values():
-  ## Заголовок категории
-  <%el:header level="${category.level}" id="${category.code}">
-    ${category.name}
-  </%el:header>
-
-  ## Описание категории
-  % if category.description:
-    <p>${category.description}</p>
-  % endif
-
-  <%el:segment_grid category="${category}" />
-  <%el:segment_grid_xs category="${category}" />
-% endfor
+<div id="segments-grid-root"></div>
 </%block>

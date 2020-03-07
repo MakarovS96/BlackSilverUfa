@@ -1,19 +1,8 @@
+import { Data } from './data';
+
 class Redirect {
-  static segments = null;
-
-  static async init() {
-    if (Redirect.segments) return Redirect.segments;
-
-    return fetch('/data/segments.json').then((res) => {
-      return res.json();
-    }).then((segments) => {
-      Redirect.segments = segments;
-      return segments;
-    });
-  }
-
   static async link(hash) {
-    let segments = await Redirect.init();
+    let segments = await Data.segments();
     let dest = segments[hash];
 
     if (dest !== undefined) {

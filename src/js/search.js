@@ -1,4 +1,5 @@
 import autocomplete from 'autocompleter';
+import { Data } from './data';
 
 class Search {
   static games = null;
@@ -10,20 +11,17 @@ class Search {
   static async load() {
     if (Search.games != null) return Search.games;
 
-    return fetch('/data/categories.json').then((res) => {
-      return res.json();
-    }).then((categories) => {
-      // Create flat array of games and add category name to each of them
-      Search.games = Object.keys(categories).flatMap((key) => {
-        let category = categories[key];
-        return category.games.map((game) => {
-          game.group = category.name;
-          return game;
-        });
-      });
+    let categories = await Data.categories();
 
-      return Search.games;
+    Search.games = Object.keys(categories).flatMap((key) => {
+      let category = categories[key];
+      return category.games.map((game) => {
+        game.group = category.name;
+        return game;
+      });
     });
+
+    return Search.games;
   }
 
   static async init(selector) {

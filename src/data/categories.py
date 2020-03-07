@@ -4,7 +4,7 @@ from sortedcontainers import SortedList
 
 from .games import games, Game
 from .streams import streams, SegmentReference
-from ..utils import load_json, join, json_escape, indent
+from ..utils import load_json, join, json_escape, indent, numword
 
 
 CATEGORIES_JSON = 'data/categories.json'
@@ -41,11 +41,8 @@ class Category:
 
     @join()
     def to_json(self, compiled=False):
-        if not compiled:
-            keys = ['name', 'description', 'code',
-                    'level', 'search', 'split_by_year']
-        else:
-            keys = ['name']
+        keys = ['name', 'description', 'code',
+                'level', 'search', 'split_by_year']
 
         fields = attr.fields_dict(type(self))
 
@@ -70,9 +67,13 @@ class Category:
 
             first = True
             for game in self.games:
-                data = dict(name=game.name, year=game.date.year)
+                data = dict(name=game.name,
+                            year=game.date.year,
+                            thumbnail=game.thumbnail)
+
                 if isinstance(game, Game):
                     data['url'] = game.filename
+                    data['badge'] = numword(game.stream_count, 'стрим')
                 elif isinstance(game, SegmentReference):
                     data['url'] = game.url
 

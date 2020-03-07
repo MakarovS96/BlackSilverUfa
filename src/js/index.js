@@ -1,10 +1,14 @@
 import 'bootstrap.native/dist/bootstrap-native-v4';
 import Darkmode from 'darkmode-js';
 import Headroom from 'headroom.js';
-import LazyLoad from 'vanilla-lazyload';
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 import { Search } from './search';
 import { Redirect } from './redirect';
 import { Matomo } from './matomo';
+import { Data } from './data';
+import { SegmentsGrid } from './components/segments-grid.jsx';
 import './player';
 
 var darkmode = new Darkmode({
@@ -40,8 +44,6 @@ var headroom = new Headroom(document.querySelector('nav'), {
 });
 headroom.init();
 
-new LazyLoad({ elements_selector: '.lazyload' });
-
 // Matomo
 Matomo.trackPageView();
 
@@ -52,3 +54,13 @@ if (document.querySelector('#search')) {
 
 // Redirect
 window.Redirect = Redirect;
+
+// Render categories on main page
+if (document.querySelector('#segments-grid-root')) {
+  Data.categories().then((categories) => {
+    ReactDOM.render(
+      React.createElement(SegmentsGrid, { data: categories }),
+      document.querySelector('#segments-grid-root')
+    );
+  });
+}
