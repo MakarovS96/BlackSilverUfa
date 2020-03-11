@@ -1,6 +1,7 @@
 import React from 'react';
 import LazyLoad from 'react-lazyload';
 import MediaQuery from 'react-responsive';
+import { Data } from '../data';
 
 class SegmentCard extends React.Component {
   badge() {
@@ -180,8 +181,77 @@ class Category extends React.Component {
 }
 
 class SegmentsIndex extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      loaded: false,
+      error: false,
+      data: {}
+    };
+  }
+
+  loadData() {
+    Data.categories().then((data) => {
+      this.setState({
+        loaded: true,
+        error: false,
+        data: data
+      });
+    }).catch((err) => {
+      console.log(err);
+      this.setState({ error: true });
+    });
+  }
+
+  componentDidMount() {
+    if (!this.state.loaded) {
+      this.loadData();
+    }
+  }
+
+  loading() {
+    return (
+      <div className="d-flex justify-content-center">
+        <div className="spinner-border big" role="status">
+          <span className="sr-only"></span>
+        </div>
+      </div>
+    );
+  }
+
+  retry() {
+    if (this.state.error) {
+      this.setState({ error: false });
+      this.loadData();
+    }
+  }
+
+  error() {
+    return (
+      <div className="text-center">
+        <h3>Ошибка!</h3>
+        <p>Не удалось загрузить категории :(</p>
+        <button
+          type="button"
+          className="btn btn-primary"
+          onClick={() => {this.retry()}}>
+          Попробовать снова
+        </button>
+      </div>
+    );
+  }
+
   render() {
-    return Object.values(this.props.data).map((category) => {
+    if (this.state.error) {
+      return this.error();
+    }
+
+    if (!this.state.loaded) {
+      return this.loading();
+    }
+
+    return Object.values(this.state.data).map((category) => {
       return <Category key={category.code} {...category} />;
     });
   }

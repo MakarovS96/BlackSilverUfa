@@ -7,7 +7,6 @@ import ReactDOM from 'react-dom';
 import { Search } from './search';
 import { Redirect } from './redirect';
 import { Matomo } from './matomo';
-import { Data } from './data';
 import { SegmentsIndex } from './components/segments-index.jsx';
 import './player';
 
@@ -57,10 +56,8 @@ window.Redirect = Redirect;
 
 // Render categories on main page
 if (document.querySelector('#segments-grid-root')) {
-  Data.categories().then((categories) => {
-    ReactDOM.render(
-      React.createElement(SegmentsIndex, { data: categories }),
-      document.querySelector('#segments-grid-root')
-    );
-  });
+  ReactDOM.render(
+    React.createElement(SegmentsIndex),
+    document.querySelector('#segments-grid-root')
+  );
 }
