@@ -2,10 +2,6 @@ import React from 'react';
 import LazyLoad from 'react-lazyload';
 
 class SegmentCard extends React.Component {
-  img(src) {
-    return <img className="card-img-top" src={src} />;
-  }
-
   badge() {
     return (
       <div className="card-img-overlay card-badge">
@@ -24,20 +20,34 @@ class SegmentCard extends React.Component {
     );
   }
 
+  img(src) {
+    return <img className="card-img-top" src={src} />;
+  }
+
+  thumbnail() {
+    if (this.props.thumbnail) {
+      return (
+        <LazyLoad
+          placeholder={this.img('/static/images/no-preview.png')}
+          resize={true}
+          offset={200}>
+          {this.img(this.props.thumbnail)}
+        </LazyLoad>
+      );
+    } else {
+      return this.img('/static/images/no-preview.png')
+    }
+  }
+
   render() {
     return (
       <div className="col-sm-6 col-md-4 col-lg-3 col-xl-2 col-card">
         <div className="card">
-          <LazyLoad
-            placeholder={this.img('/static/images/no-preview.png')}
-            resize={true}
-            offset={200}>
-            <a href={this.props.url}>
-              {this.img(this.props.thumbnail)}
-              {this.overlay()}
-              {this.props.badge ? this.badge() : null}
-            </a>
-          </LazyLoad>
+          <a href={this.props.url}>
+            {this.thumbnail()}
+            {this.overlay()}
+            {this.props.badge ? this.badge() : null}
+          </a>
         </div>
       </div>
     );
@@ -119,7 +129,6 @@ class Category extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     return [
       this.title(),
       this.props.description ?

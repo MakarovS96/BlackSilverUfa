@@ -180,7 +180,7 @@ class Segment:
         if self.youtube:
             return f'https://img.youtube.com/vi/{self.youtube}/mqdefault.jpg'
         else:
-            return '/static/images/no-preview.png'
+            return None
 
     @join()
     def to_json(self, compiled=False):
