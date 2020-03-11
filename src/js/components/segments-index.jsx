@@ -55,6 +55,44 @@ class SegmentCard extends React.Component {
   }
 }
 
+class SegmentGrid extends React.Component {
+  separator(text) {
+    return (
+      <div key={text} className="col-12">
+        <div className="hr-sect">
+          ↓ {text} ↓
+        </div>
+      </div>
+    );
+  }
+
+  items() {
+    let current_year = this.props.games[0].year;
+
+    return this.props.games.map((game) => {
+      let card = <SegmentCard key={game.url} {...game} />;
+
+      if (this.props.split_by_year != false && game.year != current_year) {
+        current_year = game.year;
+        return [
+          this.separator(`${game.year} год`),
+          card
+        ];
+      } else {
+        return card;
+      }
+    });
+  }
+
+  render() {
+    return (
+      <div className="row d-none d-flex">
+        {this.items()}
+      </div>
+    );
+  }
+}
+
 class SegmentItem extends React.Component {
   badge() {
     return (
@@ -74,15 +112,7 @@ class SegmentItem extends React.Component {
   }
 }
 
-class Category extends React.Component {
-  title() {
-    return React.createElement(
-      `h${this.props.level || 2}`,
-      { id: this.props.code, key: 'title' },
-      this.props.name
-    );
-  }
-
+class SegmentList extends React.Component {
   separator(text) {
     return (
       <div key={text} className="col-12">
@@ -93,25 +123,7 @@ class Category extends React.Component {
     );
   }
 
-  segment_grid() {
-    let current_year = this.props.games[0].year;
-
-    return this.props.games.map((game) => {
-      let card = <SegmentCard key={game.url} {...game} />;
-
-      if (this.props.split_by_year != false && game.year != current_year) {
-        current_year = game.year;
-        return [
-          this.separator(`${game.year} год`),
-          card
-        ];
-      } else {
-        return card;
-      }
-    });
-  }
-
-  segment_list() {
+  items() {
     let current_year = this.props.games[0].year;
 
     return this.props.games.map((game) => {
@@ -130,26 +142,44 @@ class Category extends React.Component {
   }
 
   render() {
+    return (
+      <ul className="list-group">
+        {this.items()}
+      </ul>
+    );
+  }
+}
+
+class Category extends React.Component {
+  title() {
+    return React.createElement(
+      `h${this.props.level || 2}`,
+      { id: this.props.code, key: 'title' },
+      this.props.name
+    );
+  }
+
+  render() {
     return [
       this.title(),
       this.props.description ?
         <p key="description">{this.props.description}</p> :
         null,
       <MediaQuery minDeviceWidth={450} key="grid">
-        <div className="row d-none d-flex">
-          {this.segment_grid()}
-        </div>
+        <SegmentGrid
+          games={this.props.games}
+          split_by_year={this.props.split_by_year} />
       </MediaQuery>,
       <MediaQuery maxDeviceWidth={449} key="list">
-        <ul className="list-group">
-          {this.segment_list()}
-        </ul>
+        <SegmentList
+          games={this.props.games}
+          split_by_year={this.props.split_by_year} />
       </MediaQuery>
     ];
   }
 }
 
-class SegmentsGrid extends React.Component {
+class SegmentsIndex extends React.Component {
   render() {
     return Object.values(this.props.data).map((category) => {
       return <Category key={category.code} {...category} />;
@@ -157,4 +187,4 @@ class SegmentsGrid extends React.Component {
   }
 }
 
-export { SegmentsGrid };
+export { SegmentsIndex };

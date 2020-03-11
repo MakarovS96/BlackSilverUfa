@@ -8,7 +8,7 @@ import { Search } from './search';
 import { Redirect } from './redirect';
 import { Matomo } from './matomo';
 import { Data } from './data';
-import { SegmentsGrid } from './components/segments-grid.jsx';
+import { SegmentsIndex } from './components/segments-index.jsx';
 import './player';
 
 var darkmode = new Darkmode({
@@ -59,7 +59,7 @@ window.Redirect = Redirect;
 if (document.querySelector('#segments-grid-root')) {
   Data.categories().then((categories) => {
     ReactDOM.render(
-      React.createElement(SegmentsGrid, { data: categories }),
+      React.createElement(SegmentsIndex, { data: categories }),
       document.querySelector('#segments-grid-root')
     );
   });
