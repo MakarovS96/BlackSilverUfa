@@ -1,5 +1,6 @@
 import React from 'react';
 import LazyLoad from 'react-lazyload';
+import MediaQuery from 'react-responsive';
 
 class SegmentCard extends React.Component {
   badge() {
@@ -134,12 +135,16 @@ class Category extends React.Component {
       this.props.description ?
         <p key="description">{this.props.description}</p> :
         null,
-      <div className="row d-none d-sm-flex" key="grid">
-        {this.segment_grid()}
-      </div>,
-      <ul className="list-group d-sm-none" key="list">
-        {this.segment_list()}
-      </ul>
+      <MediaQuery minDeviceWidth={450} key="grid">
+        <div className="row d-none d-flex">
+          {this.segment_grid()}
+        </div>
+      </MediaQuery>,
+      <MediaQuery maxDeviceWidth={449} key="list">
+        <ul className="list-group">
+          {this.segment_list()}
+        </ul>
+      </MediaQuery>
     ];
   }
 }
