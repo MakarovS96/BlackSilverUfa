@@ -1,6 +1,5 @@
 import autocomplete from 'autocompleter';
 import { Data } from './data';
-import { Redirect } from './redirect';
 
 class Search {
   static games = null;
@@ -19,9 +18,20 @@ class Search {
 
     Search.games = Object.keys(categories).flatMap((key) => {
       let category = categories[key];
-      return category.games.map((game) => {
+      return category.games.flatMap((game) => {
         game.group = category.name;
-        return game;
+
+        let names = game.name.split(' / ');
+
+        if (names.length > 1) {
+          return names.map((name) => {
+            let subref = Object.assign({}, game);
+            subref.name = name;
+            return subref;
+          });
+        } else {
+          return game;
+        }
       });
     });
 
