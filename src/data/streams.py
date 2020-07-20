@@ -178,13 +178,6 @@ class Segment:
         else:
             return self.twitch + '.' + str(self.segment)
 
-    @property
-    def thumbnail(self):
-        if self.youtube:
-            return f'https://img.youtube.com/vi/{self.youtube}/mqdefault.jpg'
-        else:
-            return None
-
     @join()
     def to_json(self, compiled=False):
         if not compiled:

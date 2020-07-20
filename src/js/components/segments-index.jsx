@@ -4,6 +4,15 @@ import MediaQuery from 'react-responsive';
 import { Data } from '../data';
 
 class SegmentCard extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      loaded: false,
+      thumbnail: null
+    };
+  }
+
   badge() {
     return (
       <div className="card-img-overlay card-badge">
@@ -26,14 +35,36 @@ class SegmentCard extends React.Component {
     return <img className="card-img-top" src={src} />;
   }
 
+  componentDidMount() {
+    if (!this.state.loaded) {
+      this.loadThumbnail().then((url) => {
+        this.setState({
+          loaded: true,
+          thumbnail: url
+        });
+      });
+    }
+  }
+
+  async loadThumbnail() {
+    let segments = await Data.segments();
+    let segment = segments[this.props.segment];
+
+    if (segment.youtube) {
+      return `https://img.youtube.com/vi/${segment.youtube}/mqdefault.jpg`;
+    } else {
+      return null;
+    }
+  }
+
   thumbnail() {
-    if (this.props.thumbnail) {
+    if (this.state.thumbnail) {
       return (
         <LazyLoad
           placeholder={this.img('/static/images/no-preview.png')}
           resize={true}
           offset={200}>
-          {this.img(this.props.thumbnail)}
+          {this.img(this.state.thumbnail)}
         </LazyLoad>
       );
     } else {
@@ -187,17 +218,21 @@ class SegmentsIndex extends React.Component {
     this.state = {
       loaded: false,
       error: false,
-      data: {}
+      categories: {},
+      segments: {},
+      segment_keys: []
     };
   }
 
   loadData() {
-    Data.categories().then((data) => {
+    Promise.all([Data.categories(), Data.segments()]).then((data) => {
       this.setState({
         loaded: true,
         error: false,
-        data: data
-      });
+        categories: data[0],
+        segments: data[1],
+        segment_keys: Object.keys(data[1]).sort((a, b) => String(a).localeCompare(b))
+      })
     }).catch((err) => {
       console.log(err);
       this.setState({ error: true });
@@ -251,9 +286,27 @@ class SegmentsIndex extends React.Component {
       return this.loading();
     }
 
-    return Object.values(this.state.data).map((category) => {
+    let recent = {
+      name: "Недавние стримы",
+      code: "recent",
+      level: 2,
+      split_by_year: false,
+      games: this.state.segment_keys.slice(-11, -1).map((key) => {
+        let segment = this.state.segments[key];
+        return {
+          name: segment.name,
+          url: segment.url,
+          segment: key
+        };
+      })
+    };
+
+    let categories = [];
+    categories.push(<Category key="recent" {...recent} />);
+    categories.push(...Object.values(this.state.categories).map((category) => {
       return <Category key={category.code} {...category} />;
-    });
+    }))
+    return categories;
   }
 }
 

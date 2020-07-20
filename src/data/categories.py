@@ -41,11 +41,8 @@ class Category:
 
     @join()
     def to_json(self, compiled=False):
-        if not compiled:
-            keys = ['name', 'description', 'code',
-                    'level', 'search', 'split_by_year']
-        else:
-            keys = ['name', 'description', 'code', 'search', 'split_by_year']
+        keys = ['name', 'description', 'code',
+                'level', 'search', 'split_by_year']
 
         fields = attr.fields_dict(type(self))
 
@@ -70,15 +67,15 @@ class Category:
 
             first = True
             for game in self.games:
-                data = dict(name=game.name,
-                            year=game.date.year,
-                            thumbnail=game.thumbnail)
+                data = dict(name=game.name, year=game.date.year)
 
                 if isinstance(game, Game):
                     data['url'] = game.filename
                     data['badge'] = numword(game.stream_count, 'стрим')
+                    data['segment'] = game.streams[game.cover or 0].hash
                 elif isinstance(game, SegmentReference):
                     data['url'] = game.url
+                    data['segment'] = game.hash
 
                 if not first:
                     yield ',\n'
@@ -103,15 +100,7 @@ class Categories(dict):
         uncategorized = games.copy()
 
         for category in categories:
-            if category['code'] == 'recent':
-                c = Category.from_dict(category)
-                last_segments = list(streams.segments)[-10:]
-
-                for segment in last_segments:
-                    c.games.add(segment.reference())
-            else:
-                c = Category.from_dict(category, games=uncategorized)
-
+            c = Category.from_dict(category, games=uncategorized)
             self[c.code] = c
 
         month_ago = datetime.now() - timedelta(days=30)

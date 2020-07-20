@@ -38,13 +38,6 @@ class Game:
         return len(set([s.twitch for s in self.streams]))
 
     @property
-    def thumbnail(self):
-        if isinstance(self.cover, int):
-            return self.streams[self.cover].thumbnail
-        else:
-            return self.cover
-
-    @property
     def filename(self):
         return f'/links/{self.id}.html'
 
