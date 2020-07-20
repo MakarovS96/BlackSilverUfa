@@ -31,8 +31,8 @@ class Search {
   static async init(selector) {
     let games = await Search.load();
 
-    await Redirect.init();
-    let segments = Object.keys(Redirect.segments);
+    let segments = await Data.segments();
+    let segment_keys = Object.keys(segments);
 
     return autocomplete({
       minLength: 2,
@@ -40,9 +40,9 @@ class Search {
       fetch: (text, update) => {
         text = Search.strip(text);
 
-        if (segments.indexOf(text) !== -1) {
-          update(segments.filter((key) => key.startsWith(text)).map((key) => {
-            let segment = Redirect.segments[key];
+        if (segment_keys.indexOf(text) !== -1) {
+          update(segment_keys.filter((key) => key.startsWith(text)).map((key) => {
+            let segment = segments[key];
             return {
               name: segment.name,
               group: 'Переход по ID',
