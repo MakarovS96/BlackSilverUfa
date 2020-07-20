@@ -27,24 +27,63 @@
     ]
   },
   {
+    "name": "Beyond Blue",
+    "category": "ongoing",
+    "id": "beyond-blue",
+    "streams": [
+      { "name": "1.1", "twitch": "647778850" },
+      { "name": "1.2", "twitch": "647860070", "segment": 0 }
+    ]
+  },
+  {
     "name": "Несюжетные коопы",
     "category": "co-op",
     "type": "list",
     "id": "co-op",
     "streams": [
-      { "name": "Ben and Ed: Blood Party / Stick Fight", "twitch": "180663832", "start": "1:35:44" },
-      { "name": "Duck Game / Move or Die", "twitch": "182448131", "start": "2:18:21" },
-      { "name": "Spelunker! Party / Ultimate Chicken Horse", "twitch": "184206477" },
+      { "twitch": "180663832", "subrefs": [
+        { "name": "Ben and Ed: Blood Party", "start": "1:35:44" },
+        { "name": "Stick Fight", "start": "3:19:30" }
+      ] },
+      { "twitch": "182448131", "subrefs": [
+        { "name": "Duck Game", "start": "2:18:21" },
+        { "name": "Move or Die", "start": "2:46:00" }
+      ] },
+      { "twitch": "184206477", "subrefs": [
+        { "name": "Spelunker! Party" },
+        { "name": "Ultimate Chicken Horse", "start": "54:58" }
+      ] },
       { "name": "Pulsar: Lost Colony", "twitch": "200702885", "start": "2:09:00" },
-      { "name": "Looterkings / Mount Your Friends", "twitch": "206394832" },
-      { "name": "The Hunter: Call of the Wild / Road Redemption", "twitch": "213247693" },
-      { "name": "Viscera Cleanup Detail / Astroneer", "twitch": "213846142", "start": "1:58:00" },
+      { "twitch": "206394832", "subrefs": [
+        { "name": "Looterkings" },
+        { "name": "Mount Your Friends", "start": "1:25:00" }
+      ] },
+      { "twitch": "213247693", "subrefs": [
+        { "name": "The Hunter: Call of the Wild" },
+        { "name": "Road Redemption", "start": "3:10:00" }
+      ] },
+      { "twitch": "213846142", "subrefs": [
+        { "name": "Viscera Cleanup Detail", "start": "1:58:00" },
+        { "name": "Astroneer", "start": "3:00:00" }
+      ] },
       { "name": "Dead Dozen", "twitch": "236864236", "segment": 0 },
-      { "name": "Albion Online / Farm Together", "twitch": "239364187" },
-      { "name": "Dead Realm / SoulHunt", "twitch": "250258247", "start": "1:58:13" },
+      { "twitch": "239364187", "subrefs": [
+        { "name": "Albion Online" },
+        { "name": "Farm Together", "start": "3:24:32" }
+      ] },
+      { "twitch": "250258247", "subrefs": [
+        { "name": "Dead Realm", "start": "1:58:13" },
+        { "name": "SoulHunt", "start": "4:06:34" }
+      ] },
       { "name": "Conan Exiles", "twitch": "259446831" },
-      { "name": "Murderous Pursuits / The Forest", "twitch": "268497396", "start": "2:56:48" },
-      { "name": "The Goatman / Cuisine Royale", "twitch": "274651226", "start": "2:07:43" },
+      { "twitch": "268497396", "subrefs": [
+        { "name": "Murderous Pursuits", "start": "2:56:48" },
+        { "name": "The Forest", "start": "4:05:17" }
+      ] },
+      { "twitch": "274651226", "subrefs": [
+        { "name": "The Goatman", "start": "2:07:43" },
+        { "name": "Cuisine Royale", "start": "4:29:43" }
+      ] },
       { "name": "Call of Duty WWII: Nazi Zombies", "twitch": "278920291", "segment": 1 },
       { "name": "Drunk-Fu: Wasted Masters", "twitch": "284156303", "start": "3:26:53" },
       { "name": "Darwin Project", "twitch": "287404564", "start": "53:23" },
@@ -62,20 +101,95 @@
       { "name": "Diablo", "twitch": "394859046" },
       { "name": "Generation Zero", "twitch": "402450066", "segment": 1 },
       { "name": "Pacify", "twitch": "410400457", "start": "1:33:15" },
-      { "name": "Peekaboo / Shotgun Farmers", "twitch": "410963500", "start": "1:19:27" },
-      { "name": "We Were Here / We Were Here Too", "twitch": "430120134", "segment": 1 },
+      { "twitch": "410963500", "subrefs": [
+        { "name": "Peekaboo", "start": "1:19:27" },
+        { "name": "Shotgun Farmers", "start": "3:56:29" }
+      ] },
+      { "twitch": "430120134", "segment": 1, "subrefs": [
+        { "name": "We Were Here" },
+        { "name": "We Were Here Too", "start": "3:29:57" }
+      ] },
       { "name": "Barotrauma", "twitch": "435683759" },
       { "name": "DayZ на PS4 с Джеком", "twitch": "449465888" },
       { "name": "Hot Shot Burn", "twitch": "468908083", "start": "2:33:36" },
-      { "name": "Nippon Marathon / Bloody Trapland / Super Mario Party / Mario Kart 8 Deluxe", "twitch": "478129023" },
-      { "name": "Marooners / Save Your Nuts", "twitch": "487949971", "start": "1:25:19" },
+      { "twitch": "478129023", "subrefs": [
+        { "name": "Nippon Marathon" },
+        { "name": "Bloody Trapland", "start": "1:12:00" },
+        { "name": "Super Mario Party", "start": "2:11:01" },
+        { "name": "Mario Kart 8 Deluxe", "start": "4:49:32" }
+      ] },
+      { "twitch": "487949971", "subrefs": [
+        { "name": "Marooners", "start": "1:25:19" },
+        { "name": "Save Your Nuts", "start": "1:45:50" }
+      ] },
       { "name": "We Were Here Together", "twitch": "493585395" },
-      { "name": "Crimson Hotel / Niffelheim", "twitch": "497190114" },
-      { "name": "Tools Up! / Out of Space", "twitch": "518306588", "start": "1:43:33" },
-      { "name": "Beyond Senses / eXplosive Dinosaurs / Titeuf", "twitch": "527927154", "start": "2:07:14" },
+      { "twitch": "497190114", "subrefs": [
+        { "name": "Crimson Hotel" },
+        { "name": "Niffelheim", "start": "1:13:26" }
+      ] },
+      { "name": "Out of Space", "twitch": "518306588", "start": "2:53:26" },
+      { "twitch": "527927154", "subrefs": [
+        { "name": "Beyond Senses", "start": "2:07:14" },
+        { "name": "eXplosive Dinosaurs", "start": "2:23:48" },
+        { "name": "Titeuf", "start": "2:45:39" }
+      ] },
       { "name": "Left 4 Dead 2", "twitch": "532342982" },
-      { "name": "Totally Reliable Delivery Service / Paunch", "twitch": "552313454", "start": "4:01:43" },
-      { "name": "I Will Eat You", "twitch": "556596083", "start": "2:07:59" }
+      { "name": "Paunch", "twitch": "552313454", "start": "4:48:30" },
+      { "name": "I Will Eat You", "twitch": "556596083", "start": "2:07:59" },
+      { "name": "Broomstick League", "twitch": "567045755", "segment": 1, "start": "3:44:15" },
+      { "name": "Stab Stab Stab!", "twitch": "577415879", "start": "3:49:35" },
+      { "name": "Moving Out", "twitch": "612822436" },
+      { "twitch": "633403643", "subrefs": [
+        { "name": "Embr", "start": "2:09:37" },
+        { "name": "Cannibal Cuisine", "start": "3:28:31" }
+      ] },
+      { "name": "Broforce", "twitch": "661040084", "start": "4:44:29" }
+    ]
+  },
+  {
+    "name": "Biped",
+    "category": "co-op-series",
+    "id": "biped",
+    "streams": [
+      { "name": "1", "twitch": "586412927" },
+      { "name": "2", "twitch": "661040084", "start": "3:24:32" }
+    ]
+  },
+  {
+    "name": "Tools Up!",
+    "category": "co-op-series",
+    "id": "tools-up",
+    "streams": [
+      { "name": "1", "twitch": "518306588", "start": "1:43:33" },
+      { "name": "2", "twitch": "633403643", "start": "4:29:43" }
+    ]
+  },
+  {
+    "name": "Streets of Rage 4",
+    "category": "finished",
+    "id": "streets-of-rage-4",
+    "streams": [
+      { "name": "1", "twitch": "623734401", "start": "1:07:42" },
+      { "name": "2", "twitch": "628517071", "start": "3:54:49" }
+    ]
+  },
+  {
+    "name": "Totally Reliable Delivery Service",
+    "category": "co-op-series",
+    "id": "tr-delivery-service",
+    "streams": [
+      { "name": "1", "twitch": "552313454", "start": "4:01:43" },
+      { "name": "2", "twitch": "601167190", "start": "4:18:51" }
+    ]
+  },
+  {
+    "name": "Predator: Hunting Grounds",
+    "category": "co-op-series",
+    "id": "predator-hunting-grounds",
+    "streams": [
+      { "name": "1", "twitch": "577415879", "start": "2:11:26" },
+      { "name": "2", "twitch": "601167190" },
+      { "name": "3", "twitch": "602188455" }
     ]
   },
   {
@@ -102,7 +216,8 @@
     "id": "destiny-2",
     "streams": [
       { "name": "Со StopGame", "twitch": "315365879", "start": "2:04:12" },
-      { "name": "С Triplewipe", "twitch": "547176657", "start": "2:52:57" }
+      { "name": "1 (с Triplewipe)", "twitch": "547176657", "start": "2:52:57" },
+      { "name": "2 (с Triplewipe)", "twitch": "606017953", "start": "4:00:40" }
     ]
   },
   {
@@ -111,7 +226,9 @@
     "id": "heave-ho",
     "streams": [
       { "name": "1", "twitch": "518306588" },
-      { "name": "2", "twitch": "527927154" }
+      { "name": "2", "twitch": "527927154" },
+      { "name": "3 (заново)", "twitch": "577415879", "start": "4:00:50" },
+      { "name": "4", "twitch": "612822436", "start": "1:58:40" }
     ]
   },
   {
@@ -163,7 +280,7 @@
     ]
   },
   {
-    "name": "Call of Duty: Modern Warfare (бета)",
+    "name": "Call of Duty: Modern Warfare",
     "category": "co-op-series",
     "id": "cod-mw",
     "streams": [
@@ -171,6 +288,20 @@
       { "name": "2", "twitch": "484398311" },
       { "name": "3.1", "twitch": "484914562", "start": "3:58:42" },
       { "name": "3.2", "twitch": "485019796" }
+    ]
+  },
+  {
+    "name": "Call of Duty: Warzone",
+    "category": "co-op-series",
+    "id": "cod-warzone",
+    "streams": [
+      { "name": "1", "twitch": "572721394", "start": "4:06:10" },
+      { "name": "2", "twitch": "576592201", "start": "5:08:32" },
+      { "name": "3", "twitch": "592666810" },
+      { "name": "4", "twitch": "648739017" },
+      { "name": "5 (часть 1)", "twitch": "666848828", "start": "3:09:13" },
+      { "name": "5 (часть 2)", "twitch": "667061238" },
+      { "name": "6", "twitch": "680344977", "start": "4:11:45" }
     ]
   },
   {
@@ -211,12 +342,34 @@
   },
   {
     "name": "Minecraft",
-    "category": "co-op-series",
+    "category": "infinite",
     "id": "minecraft",
     "streams": [
-      { "name": "0 (соло)", "twitch": "438447673", "start": "1:52:41" },
+      { "name": "1", "twitch": "438447673", "start": "1:52:41" },
+      { "name": "2", "twitch": "619696167" },
+      { "name": "3", "twitch": "622728652" },
+      { "name": "4", "twitch": "625606171" },
+      { "name": "5", "twitch": "632445518" },
+      { "name": "6", "twitch": "637278017" },
+      { "name": "7", "twitch": "642910038", "start": "4:38:00" }
+    ]
+  },
+  {
+    "name": "Minecraft (кооп)",
+    "category": "co-op-series",
+    "id": "minecraft-coop",
+    "streams": [
       { "name": "1", "twitch": "443118072" },
       { "name": "2", "twitch": "449016487" }
+    ]
+  },
+  {
+    "name": "Minecraft - Bedrock Edition (RTX beta)",
+    "category": "infinite",
+    "id": "minecraft-bedrock",
+    "streams": [
+      { "name": "1", "twitch": "599255447" },
+      { "name": "2", "twitch": "605080262" }
     ]
   },
   {
@@ -497,7 +650,10 @@
       { "name": "18", "twitch": "497190114", "start": "3:49:48" },
       { "name": "19", "twitch": "500334713", "start": "4:06:35" },
       { "name": "20", "twitch": "518306588", "start": "3:04:27" },
-      { "name": "21", "twitch": "527927154", "start": "3:29:21" }
+      { "name": "21", "twitch": "527927154", "start": "3:29:21" },
+      { "name": "22", "twitch": "577415879", "start": "5:09:44" },
+      { "name": "23", "twitch": "601167190", "start": "5:45:40" },
+      { "name": "24", "twitch": "633403643", "start": "4:55:16" }
     ]
   },
   {
@@ -544,7 +700,8 @@
       { "name": "3", "twitch": "353211576", "start": "3:13:55" },
       { "name": "4", "twitch": "423369283", "segment": 0, "start": "3:02:31" },
       { "name": "5", "twitch": "437135971", "segment": 2 },
-      { "name": "6", "twitch": "452195101" }
+      { "name": "6", "twitch": "452195101" },
+      { "name": "7", "twitch": "567045755", "segment": 1, "start": "4:55:46" }
     ]
   },
   {
@@ -662,7 +819,9 @@
       { "name": "Gamescom 2019", "twitch": "469393130" },
       { "name": "BlizzCon 2019 (обзор)", "twitch": "502940448" },
       { "name": "State of Play 2019", "twitch": "519609666" },
-      { "name": "The Game Awards 2019 (обзор)", "twitch": "520877239" }
+      { "name": "The Game Awards 2019 (обзор)", "twitch": "520877239" },
+      { "name": "Презентация PlayStation 5", "twitch": "569683310", "start": "3:03:45" },
+      { "name": "Xbox Inside 2020", "twitch": "613793616", "start": "1:59:40" }
     ]
   },
   {
@@ -736,6 +895,19 @@
       { "name": "PC Gaming Show", "twitch": "437135971", "segment": 0, "start": "53:30" },
       { "name": "Ubisoft", "twitch": "437135971", "segment": 1, "start": "3:55:56" },
       { "name": "Square Enix", "twitch": "437135971", "segment": 3 }
+    ]
+  },
+  {
+    "name": "неПрофессиональный неE3 2020",
+    "category": "expos",
+    "id": "e3_2020",
+    "streams": [
+      { "name": "Sony", "twitch": "647860070", "segment": 1 },
+      { "name": "PC Gaming Show", "twitch": "649632498", "start": "5:00:34" },
+      { "name": "Square Enix - Marvel's Avengers (без Артёма)", "twitch": "660069027", "start": "3:59:33" },
+      { "name": "CD Projekt Red - Cyberpunk 2077", "twitch": "661040084", "start": "2:58:33" },
+      { "name": "Devolver Digital", "twitch": "676500778", "start": "6:00:51" },
+      { "name": "Ubisoft (без Артёма)", "twitch": "677524120", "start": "3:53:13" }
     ]
   },
   {
@@ -854,6 +1026,15 @@
     ]
   },
   {
+    "name": "Persona 5: The Royal",
+    "category": "ongoing",
+    "id": "persona-5-royal",
+    "streams": [
+      { "name": "1", "twitch": "579786256" },
+      { "name": "2", "twitch": "580574509", "start": "1:04:53" }
+    ]
+  },
+  {
     "name": "Prey",
     "category": "finished",
     "id": "prey",
@@ -867,7 +1048,8 @@
       { "name": "1 (Mooncrash DLC)", "twitch": "272205808", "segment": 0 },
       { "name": "2 (Mooncrash DLC)", "twitch": "272392172" },
       { "name": "3 (Mooncrash DLC)", "twitch": "273911703" },
-      { "name": "4 (Mooncrash DLC)", "twitch": "275418948" }
+      { "name": "4 (Mooncrash DLC)", "twitch": "275418948" },
+      { "name": "7 (заново)", "twitch": "636327019", "start": "4:36:14" }
     ]
   },
   {
@@ -881,6 +1063,18 @@
       { "name": "4", "twitch": "168936842" },
       { "name": "5", "twitch": "173993139" },
       { "name": "6", "twitch": "175695460" }
+    ]
+  },
+  {
+    "name": "Resident Evil 7 (Madhouse)",
+    "category": "ongoing",
+    "id": "re7",
+    "streams": [
+      { "name": "1 (часть 1)", "twitch": "663012938" },
+      { "name": "1 (часть 2)", "twitch": "663045694" },
+      { "name": "2", "twitch": "665878817", "start": "4:28:53" },
+      { "name": "3", "twitch": "666848828" },
+      { "name": "4", "twitch": "675494632", "start": "3:14:18" }
     ]
   },
   {
@@ -902,13 +1096,21 @@
       { "name": "Yume Nikki: Dream Diary", "twitch": "236175824" },
       { "name": "A Way Out", "twitch": "241916500" },
       { "name": "Umfend", "twitch": "245043791", "start": "42:52" },
-      { "name": "SCP: Operation Descent (демо) / Code Rebecca: House of evil / Grandma / The Road to Hades", "twitch": "249888883" },
+      { "twitch": "249888883", "subrefs": [
+        { "name": "SCP: Operation Descent (демо)" },
+        { "name": "Code Rebecca: House of evil", "start": "1:08:01" },
+        { "name": "Grandma", "start": "1:33:12" },
+        { "name": "The Road to Hades", "start": "2:03:01" }
+      ] },
       {
         "name": "Spooky's Jump Scare Mansion (с 500-й комнаты)", "twitch": "251742995", "start": "2:37:20",
         "note": "Первые 500 комнат есть на <a href=\"https://www.youtube.com/playlist?list=PLIBsKu92G5oqlPiqjXylUB0mwWJwDtmHo\">YouTube</a>."
       },
       { "name": "Lust for Darkness", "twitch": "273929911", "start": "2:52:24" },
-      { "name": "Shininng Hotel: Lost in Nowhere / Midnight Awake", "twitch": "275418948", "start": "3:15:14" },
+      { "twitch": "275418948", "subrefs": [
+        { "name": "Shininng Hotel: Lost in Nowhere", "start": "3:15:14" },
+        { "name": "Midnight Awake", "start": "3:37:22" }
+      ] },
       { "name": "The Awesome Adventures of Captain Spirit", "twitch": "278566845", "segment": 0 },
       { "name": "Dead Forest", "twitch": "293415850" },
       { "name": "Transference", "twitch": "312840878" },
@@ -939,8 +1141,21 @@
       { "name": "Project Nightmares Case 36: Henrietta Kedward", "twitch": "491017258" },
       { "name": "Superliminal", "twitch": "508178551", "start": "32:49" },
       { "name": "Lost Ember", "twitch": "512697561" },
-      { "name": "Suite 776 / The Alien Cube (демо)", "twitch": "524865260", "start": "43:20" },
-      { "name": "Walking Simulator", "twitch": "563856575", "start": "1:22:25" }
+      { "twitch": "524865260", "subrefs": [
+        { "name": "Suite 776", "start": "43:20" },
+        { "name": "The Alien Cube (демо)", "start": "2:06:17" }
+      ] },
+      { "name": "Walking Simulator", "twitch": "563856575", "start": "1:22:25" },
+      { "name": "The Complex", "twitch": "594489443", "start": "2:46:52" },
+      { "name": "Locked Up", "twitch": "603199458", "start": "3:50:00" },
+      { "name": "Call of Duty: Modern Warfare 2 Remastered", "twitch": "610935319" },
+      { "name": "House of Detention", "twitch": "629544387", "start": "3:56:40" },
+      { "name": "The Light Remake", "twitch": "642910038" },
+      { "name": "No One Lives Under The Lighthouse", "twitch": "644774531", "start": "4:55:52" },
+      { "name": "The Walking Fish 2: Final Frontier", "twitch": "645734946", "start": "4:19:43" },
+      { "name": "Secret Agent Barbie", "twitch": "649632498" },
+      { "name": "Winx Club", "twitch": "670671274" },
+      { "name": "Devolverland Expo", "twitch": "677524120" }
     ]
   },
   {
@@ -1032,7 +1247,8 @@
       { "name": "DLC 2 #2", "twitch": "209473798", "start": "29:55" },
       { "name": "DLC 2 #3", "twitch": "210846597" },
       { "name": "DLC 2 #4", "twitch": "216912425", "start": "1:43:08" },
-      { "name": "21", "twitch": "437956853" }
+      { "name": "21", "twitch": "437956853" },
+      { "name": "Тест Cemu", "twitch": "630549212" }
     ]
   },
   {
@@ -1054,7 +1270,8 @@
     "streams": [
       { "name": "1.1", "twitch": "217814961" },
       { "name": "1.2", "twitch": "217852593" },
-      { "name": "2", "twitch": "219489801" }
+      { "name": "2", "twitch": "219489801" },
+      { "name": "Тест RPCS3", "twitch": "642910038", "start": "2:39:43" }
     ]
   },
   {
@@ -1103,7 +1320,9 @@
       { "name": "Розыгрыш Asus ROG Phone", "twitch": "444021917" },
       { "name": "Розыгрыш двух ноутбуков Asus", "twitch": "448568048", "segment": 0 },
       { "name": "Розыгрыш Cyberpunk 2077", "twitch": "470288598" },
-      { "name": "Розыгрыш Asus ROG Strix SCAR II", "twitch": "508178551" }
+      { "name": "Розыгрыш Asus ROG Strix SCAR II", "twitch": "508178551" },
+      { "name": "Розыгрыш мерча Metro Exodus", "twitch": "572721394" },
+      { "name": "Розыгрыш Asus ROG Strix Scope", "twitch": "676500778" }
     ]
   },
   {
@@ -1116,10 +1335,18 @@
       { "name": "Посылки (01.04.18)", "twitch": "245415969" },
       { "name": "Посылки (30.12.18)", "twitch": "356378129" },
       { "name": "Asus ROG Phone", "twitch": "366354053", "segment": 0 },
-      { "name": "Asus ROG Zephyrus / Asus ROG Sheath", "twitch": "420241791", "segment": 1, "start": "1:25:03" },
+      { "twitch": "420241791", "segment": 1, "subrefs": [
+        { "name": "Asus ROG Zephyrus", "start": "1:25:03" },
+        { "name": "Asus ROG Sheath", "start": "1:27:03" }
+      ] },
       { "name": "Сундук Ктулху от Melinyx", "twitch": "444021917", "start": "25:10" },
-      { "name": "Asus Rog Gladius II Wireless / Asus TUF Gaming H7", "twitch": "487949971" },
-      { "name": "Посылки (31.12.19)", "twitch": "528855659" }
+      { "twitch": "487949971", "subrefs": [
+        { "name": "Asus Rog Gladius II Wireless" },
+        { "name": "Asus TUF Gaming H7", "start": "10:51" }
+      ] },
+      { "name": "Посылки (31.12.19)", "twitch": "528855659" },
+      { "name": "Asus ROG Zephyrus G15", "twitch": "650534841" },
+      { "name": "Asus ROG Strix Scope", "twitch": "675494632" }
     ]
   },
   {
@@ -1136,16 +1363,19 @@
     ]
   },
   {
-    "name": "SCP Containment Breach - Unity",
+    "name": "SCP: Unity",
     "category": "infinite",
-    "id": "scp-cbu",
+    "id": "scp-unity",
     "streams": [
       { "name": "1", "twitch": "220513992" },
       { "name": "2", "twitch": "239731404" },
       { "name": "3", "twitch": "290213414", "segment": 0 },
       { "name": "4", "twitch": "366354053", "segment": 1, "start": "1:10:04" },
       { "name": "5", "twitch": "372293257", "segment": 0 },
-      { "name": "6", "twitch": "414349690" }
+      { "name": "6", "twitch": "414349690" },
+      { "name": "7", "twitch": "577415879" },
+      { "name": "8 (часть 1)", "twitch": "578269918", "start": "4:29:05" },
+      { "name": "8 (часть 2)", "twitch": "578448008" }
     ]
   },
   {
@@ -1158,7 +1388,13 @@
       { "name": "2", "twitch": "241201704" },
       { "name": "3 (Cursed Sails)", "twitch": "293012700" },
       { "name": "4", "twitch": "497190114", "start": "2:14:14" },
-      { "name": "5", "twitch": "500788270", "start": "2:14:07" }
+      { "name": "5", "twitch": "500788270", "start": "2:14:07" },
+      { "name": "6", "twitch": "637278017", "start": "2:04:59" },
+      { "name": "7", "twitch": "639990705", "start": "2:09:11" },
+      { "name": "8", "twitch": "643897384" },
+      { "name": "9", "twitch": "650534841", "start": "3:07:07" },
+      { "name": "10", "twitch": "663976925", "start": "2:06:38" },
+      { "name": "11", "twitch": "676500778", "start": "2:07:50" }
     ]
   },
   {
@@ -1171,55 +1407,124 @@
       { "name": "Divinity: Original Sin II", "twitch": "175198877" },
       { "name": "Home Sweet Home", "twitch": "178108639" },
       { "name": "Cuphead", "twitch": "178361269" },
-      { "name": "Road Redemption / Battle Chasers", "twitch": "180397849" },
+      { "twitch": "180397849", "subrefs": [
+        { "name": "Road Redemption" },
+        { "name": "Battle Chasers", "start": "1:16:16" }
+      ] },
       { "name": "Xenoblade Chronicles 2", "twitch": "206933269" },
-      { "name": "The Coma: Recut / Lone Survivor", "twitch": "212431882", "start": "1:44:54" },
+      { "twitch": "212431882", "subrefs": [
+        { "name": "The Coma: Recut", "start": "1:44:54" },
+        { "name": "Lone Survivor", "start": "2:52:00" }
+      ] },
       { "name": "Stifled", "twitch": "212678883" },
-      { "name": "The Witchkin / Emily Wants to Play Too / LeftWay", "twitch": "222198164" },
+      { "twitch": "222198164", "subrefs": [
+        { "name": "The Witchkin" },
+        { "name": "Emily Wants to Play Too", "start": "1:55:34" },
+        { "name": "LeftWay", "start": "3:17:53" }
+      ] },
       { "name": "Yakuza 6: The Song of Life", "twitch": "226000025" },
       { "name": "Last Guardian", "twitch": "227626210" },
-      { "name": "Never Again / Boogeyman 2", "twitch": "230659866" },
+      { "twitch": "230659866", "subrefs": [
+        { "name": "Never Again" },
+        { "name": "Boogeyman 2", "start": "2:55:49" }
+      ] },
       { "name": "SCP: Secret Laboratory", "twitch": "232346216", "start": "2:58:51" },
       { "name": "Past Cure", "twitch": "233032380", "segment": 1 },
-      { "name": "Living Nightmares / Agnes Doll / Duder / The Nothing / Bunky / Die Young", "twitch": "245043791" },
-      { "name": "Extinction / Minit", "twitch": "248791166" },
-      { "name": "Fortunarium / Lobotomy Corporation / Escape Doodland / Jalopy", "twitch": "249160756" },
+      { "twitch": "245043791", "subrefs": [
+        { "name": "Living Nightmares" },
+        { "name": "Agnes Doll", "start": "2:27:25" },
+        { "name": "Duder", "start": "2:40:54" },
+        { "name": "The Nothing", "start": "2:52:40" },
+        { "name": "Bunky", "start": "2:59:25" },
+        { "name": "Die Young", "start": "3:06:32" }
+      ] },
+      { "twitch": "248791166", "subrefs": [
+        { "name": "Extinction" },
+        { "name": "Minit", "start": "44:00" }
+      ] },
+      { "twitch": "249160756", "subrefs": [
+        { "name": "Fortunarium" },
+        { "name": "Lobotomy Corporation", "start": "1:02:49" },
+        { "name": "Escape Doodland", "start": "1:42:20" },
+        { "name": "Jalopy", "start": "2:08:18" }
+      ] },
       { "name": "The Long Reach", "twitch": "249888883", "start": "2:58:39" },
-      { "name": "Descent: Silence of Mind / Tungulus / Ather / The Joy of Creation / SPAGHET / Deadstep", "twitch": "251742995" },
+      { "twitch": "251742995", "subrefs": [
+        { "name": "Descent: Silence of Mind" },
+        { "name": "Tungulus", "start": "34:08" },
+        { "name": "Ather", "start": "48:12" },
+        { "name": "The Joy of Creation", "start": "1:09:45" },
+        { "name": "SPAGHET", "start": "1:51:00" },
+        { "name": "Deadstep", "start": "2:05:23" }
+      ] },
       { "name": "For Honor", "twitch": "256894852" },
       { "name": "Frostpunk", "twitch": "257985661", "start": "1:08:56" },
       { "name": "Dark Souls: Prepare to Die Edition", "twitch": "260173384" },
       { "name": "State of Decay 2", "twitch": "262696959", "segment": 1 },
       {
-        "name": "Beware (демо) / Graveyard Keeper / Welcome Back Daddy / Smoke and Sacrifice", "twitch": "267726322",
+        "twitch": "267726322", "subrefs": [
+        { "name": "Beware (демо)" },
+        { "name": "Graveyard Keeper", "start": "1:43:21" },
+        { "name": "Welcome Back Daddy", "start": "2:22:59" },
+        { "name": "Smoke and Sacrifice", "start": "3:43:23" }
+      ],
         "note": "Официальная запись <a href=\"https://youtu.be/7WmLTIQpciU\">Beware</a> не может быть добавлена сюда, т.к. она сделана в виде монтажа. Остальных записей пока нет."
       },
       { "name": "Choice Chamber", "twitch": "268900992", "start": "3:00:48" },
-      { "name": "Exiles / Elderwale / Darkness Dwells / The Dark Inside Me / Stoneshard: Prologue / Bloodstained: Curse of the Moon", "twitch": "270816212" },
+      { "twitch": "270816212", "subrefs": [
+        { "name": "Exiles" },
+        { "name": "Elderwale", "start": "42:41" },
+        { "name": "Darkness Dwells", "start": "2:37:45" },
+        { "name": "The Dark Inside Me", "start": "2:54:37" },
+        { "name": "Stoneshard: Prologue", "start": "4:01:50" },
+        { "name": "Bloodstained: Curse of the Moon", "start": "4:32:56" }
+      ] },
       { "name": "Unravel Two", "twitch": "271646745", "segment": 0, "start": "6:36" },
       { "name": "Deluded Mind", "twitch": "275043417", "start": "2:38:23" },
-      { "name": "Sinner / Trigger", "twitch": "275418948", "start": "2:18:26" },
-      { "name": "Overwhelm / P.A.M.E.L.A (Pamela)", "twitch": "276606545", "start": "1:19:47" },
+      { "twitch": "275418948", "subrefs": [
+        { "name": "Sinner", "start": "2:18:26" },
+        { "name": "Trigger", "start": "3:00:44" }
+      ] },
+      { "twitch": "276606545", "subrefs": [
+        { "name": "Overwhelm", "start": "1:19:47" },
+        { "name": "P.A.M.E.L.A.", "start": "1:32:21" }
+      ] },
       {
         "name": "Red Faction: Guerilla Remastered", "twitch": "280402233", "segment": 0,
         "note": "Начало игры есть на <a href=\"https://youtu.be/AZoFxfnnaag\">YouTube</a>."
       },
       { "name": "Curse in our heads", "twitch": "281472149", "segment": 1 },
       { "name": "Fear the Wolves", "twitch": "282977516" },
-      { "name": "Cluster Truck / Party Hard", "twitch": "287810258" },
+      { "twitch": "287810258", "subrefs": [
+        { "name": "Cluster Truck" },
+        { "name": "Party Hard", "start": "1:38:18" }
+      ] },
       { "name": "Adoption", "twitch": "289052085", "segment": 1 },
       { "name": "True Fear: Forsaken Souls Part 1", "twitch": "290213414", "segment": 1 },
       { "name": "Fractured Lands", "twitch": "291791543", "segment": 0 },
       { "name": "Egress", "twitch": "292591348" },
-      { "name": "PUSS! / Chasm / Airships: Conquer the Skies", "twitch": "293415850", "start": "34:27" },
+      { "twitch": "293415850", "subrefs": [
+        { "name": "PUSS!", "start": "34:27" },
+        { "name": "Chasm", "start": "54:20" },
+        { "name": "Airships: Conquer the Skies", "start": "1:36:57" }
+      ] },
       { "name": "Pineview Drive", "twitch": "298040825" },
-      { "name": "Guacamelee! 2 / Breathedge", "twitch": "305785431", "start": "24:31" },
+      { "twitch": "305785431", "subrefs": [
+        { "name": "Guacamelee! 2", "start": "24:31" },
+        { "name": "Breathedge", "start": "2:36:13" }
+      ] },
       { "name": "Fist of the North Star: Lost Paradise", "twitch": "306199274" },
       { "name": "Dragon Quest XI: Echoes of an Elusive Age", "twitch": "309949699" },
-      { "name": "Need a packet? / Bus Driver Simulator 2019", "twitch": "311651965", "start": "3:45:29" },
+      { "twitch": "311651965", "subrefs": [
+        { "name": "Need a packet?", "start": "3:45:29" },
+        { "name": "Bus Driver Simulator 2019", "start": "4:05:05" }
+      ] },
       { "name": "S.T.A.L.K.E.R.: Left 2 Die", "twitch": "312042770" },
       {
-        "name": "The Bard's Tale IV: Barrows Deep / SCUM", "twitch": "313288682",
+        "twitch": "313288682", "subrefs": [
+        { "name": "The Bard's Tale IV: Barrows Deep" },
+        { "name": "SCUM", "start": "2:09:08" }
+      ],
         "note": "Начало игры доступно на <a href=\"https://youtu.be/OYtOrTD5wv4\">YouTube</a>."
       },
       { "name": "Forza Horizon 4", "twitch": "315365879" },
@@ -1234,33 +1539,68 @@
       { "name": "Pokemon: Let's Go, Pikachu!", "twitch": "337051811" },
       { "name": "Metal Gear Solid 3: Snake Eater", "twitch": "338345713", "segment": 1 },
       { "name": "Darksiders 3", "twitch": "340934900" },
-      { "name": "Return 2 Games: Book of Demons / Viviette", "twitch": "344508969", "segment": 1 },
-      { "name": "Battlefield V: The Last Tiger / The Shapeshifting Detective", "twitch": "344946351" },
+      { "twitch": "344508969", "segment": 1, "subrefs": [
+        { "name": "Return 2 Games: Book of Demons" },
+        { "name": "Viviette", "start": "3:57:56" }
+      ] },
+      { "twitch": "344946351", "subrefs": [
+        { "name": "Battlefield V: The Last Tiger" },
+        { "name": "The Shapeshifting Detective", "start": "1:29:58" }
+      ] },
       { "name": "The Darkness", "twitch": "345416464" },
       { "name": "Northbury Grove", "twitch": "347665549", "start": "40:30" },
       { "name": "Below", "twitch": "349397154", "segment": 0 },
-      { "name": "Heathen - The sons of the law / Dread of Laughter", "twitch": "351262416" },
+      { "twitch": "351262416", "subrefs": [
+        { "name": "Heathen - The sons of the law" },
+        { "name": "Dread of Laughter", "start": "2:00:57" }
+      ] },
       { "name": "The Long Dark - Redux", "twitch": "352177874" },
       { "name": "Thief 3: Deadly Shadows", "twitch": "352687063", "start": "1:59:07" },
       { "name": "Lost In Vivo", "twitch": "355395099", "start": "3:20:27" },
-      { "name": "Vane / Subject", "twitch": "364318283", "segment": 2 },
+      { "twitch": "364318283", "segment": 2, "subrefs": [
+        { "name": "Vane" },
+        { "name": "Subject", "start": "4:27:10" }
+      ] },
       { "name": "Onimusha: Warlords", "twitch": "364810379", "start": "3:09:02" },
       { "name": "Ace Combat 7: Skies Unknown", "twitch": "365752221" },
       { "name": "Alien: Blackout", "twitch": "371758027" },
       { "name": "Genesis Alpha One", "twitch": "372293257", "segment": 1 },
       { "name": "Praey for the Gods", "twitch": "374556455" },
       { "name": "SCP: Blackout (демо)", "twitch": "390719635", "segment": 0 },
-      { "name": "SCP Containment Breach - Nine Tailed Fox Mod / ШХД: Зима", "twitch": "396376161" },
-      { "name": "SCP-3008 / Blame him (демо) / Demense: Chapter 1", "twitch": "404063748" },
-      { "name": "Border Officer / Risk of Rain 2 / Creature Hunt", "twitch": "412393845" },
+      { "twitch": "396376161", "subrefs": [
+        { "name": "SCP Containment Breach - Nine Tailed Fox Mod" },
+        { "name": "ШХД: Зима", "start": "2:58:46" }
+      ] },
+      { "twitch": "404063748", "subrefs": [
+        { "name": "SCP-3008" },
+        { "name": "Blame him (демо)", "start": "1:00:15" },
+        { "name": "Demense: Chapter 1", "start": "1:44:39" }
+      ] },
+      { "twitch": "412393845", "subrefs": [
+        { "name": "Border Officer" },
+        { "name": "Risk of Rain 2", "start": "2:48:41" },
+        { "name": "Creature Hunt", "start": "3:59:30" }
+      ] },
       { "name": "Dark Devotion", "twitch": "418879336" },
       { "name": "The Painscreek Killings", "twitch": "420241791", "segment": 2 },
       { "name": "Pathologic 2 (Мор)", "twitch": "428684611", "start": "3:24:21" },
       { "name": "Dollhouse", "twitch": "429660363" },
-      { "name": "Gato Roboto / Void Bastards", "twitch": "433466467" },
+      { "twitch": "433466467", "subrefs": [
+        { "name": "Gato Roboto" },
+        { "name": "Void Bastards", "start": "2:05:58" }
+      ] },
       { "name": "Shattered: Tale of the Forgotten King", "twitch": "434798330" },
-      { "name": "Quake 2 RTX / Stay in the Light", "twitch": "438447673" },
-      { "name": "Mario Royale / TMNT Rescue-Palooza / Crash Team Racing / My Friend Pedro / Bloodstained: Ritual of the Night", "twitch": "442171113" },
+      { "twitch": "438447673", "subrefs": [
+        { "name": "Quake 2 RTX" },
+        { "name": "Stay in the Light", "start": "1:29:19" }
+      ] },
+      { "twitch": "442171113", "subrefs": [
+        { "name": "Mario Royale" },
+        { "name": "TMNT Rescue-Palooza", "start": "28:15" },
+        { "name": "Crash Team Racing", "start": "55:59" },
+        { "name": "My Friend Pedro", "start": "2:05:23" },
+        { "name": "Bloodstained: Ritual of the Night", "start": "3:13:11" }
+      ] },
       { "name": "Failed State", "twitch": "444021917", "start": "1:12:33" },
       { "name": "Daymare: 1998 (демо)", "twitch": "447694923", "segment": 0 },
       { "name": "Black Mesa", "twitch": "447694923", "segment": 1 },
@@ -1276,19 +1616,251 @@
       { "name": "Stygian: Reign of the Old Ones", "twitch": "490059507" },
       { "name": "Ghostbusters", "twitch": "490488498", "start": "4:01:22" },
       { "name": "Home Sweet Home: Episode II", "twitch": "491017258", "start": "3:04:35" },
-      { "name": "Cooking Simulator / House Flipper", "twitch": "499849877" },
-      { "name": "Need for Speed Heat / Red Dead Redemption 2 (PC)", "twitch": "504248004" },
+      { "twitch": "499849877", "subrefs": [
+        { "name": "Cooking Simulator" },
+        { "name": "House Flipper", "start": "2:37:41" }
+      ] },
+      { "twitch": "504248004", "subrefs": [
+        { "name": "Need for Speed Heat" },
+        { "name": "Red Dead Redemption 2 (PC)", "start": "2:06:04" }
+      ] },
       { "name": "Planet Zoo", "twitch": "504672487", "start": "3:50:24" },
       { "name": "Untitled Goose Game", "twitch": "508178551", "start": "3:20:41" },
       { "name": "Shenmue III", "twitch": "510472726", "start": "3:19:55" },
       { "name": "Gothic - Playable Teaser", "twitch": "521336731" },
-      { "name": "Trepang2 (демо) / The Paperman", "twitch": "524865260" },
-      { "name": "Metal Gear Solid 4: Guns of the Patriots (RPCS3)", "twitch": "526101430" },
-      { "name": "Zombie Claus / Granny: Chapter Two", "twitch": "530784764", "start": "3:59:51" },
+      { "twitch": "524865260", "subrefs": [
+        { "name": "Trepang2 (демо)" },
+        { "name": "The Paperman", "start": "2:49:10" }
+      ] },
+      { "twitch": "530784764", "subrefs": [
+        { "name": "Zombie Claus", "start": "3:59:51" },
+        { "name": "Granny: Chapter Two", "start": "4:02:11" }
+      ] },
       { "name": "Warcraft III: Reforged", "twitch": "543591605" },
-      { "name": "Foregone / Beautiful Desolation", "twitch": "559668833" },
-      { "name": "Weakless / Wolcen: Lords of Mayhem", "twitch": "562741500" },
-      { "name": "Halo: Combat Evolved Anniversary / Stilt Fella", "twitch": "563856575" }
+      { "twitch": "559668833", "subrefs": [
+        { "name": "Foregone" },
+        { "name": "Beautiful Desolation", "start": "3:42:17" }
+      ] },
+      { "twitch": "562741500", "subrefs": [
+        { "name": "Weakless" },
+        { "name": "Wolcen: Lords of Mayhem", "start": "2:02:40" }
+      ] },
+      { "twitch": "563856575", "subrefs": [
+        { "name": "Halo: Combat Evolved Anniversary" },
+        { "name": "Stilt Fella", "start": "2:08:34" }
+      ] },
+      { "name": "Animal Crossing: New Horizons", "twitch": "573544874" },
+      { "twitch": "603199458", "subrefs": [
+        { "name": "Onryo" },
+        { "name": "Cloudpunk", "start": "1:19:57" },
+        { "name": "Help Will Come Tomorrow", "start": "2:22:21" },
+        { "name": "The Walking Evil", "start": "3:01:52" }
+      ] },
+      { "name": "Gears Tactics", "twitch": "606017953" },
+      { "name": "Ghostrunner", "twitch": "618698350" },
+      { "name": "Huntdown", "twitch": "623734401" },
+      { "twitch": "626564087", "subrefs": [
+        { "name": "The Persistence", "start": "2:55:31" },
+        { "name": "Black Book", "start": "4:14:31" }
+      ] },
+      { "twitch": "628517071", "subrefs": [
+        { "name": "ManEater" },
+        { "name": "Saints Row: The Third", "start": "2:04:17" }
+      ] },
+      { "twitch": "629544387", "subrefs": [
+        { "name": "What the Golf?" },
+        { "name": "Startup Valley Adventure", "start": "37:29" },
+        { "name": "Total Tank Simulator", "start": "1:19:58" },
+        { "name": "Timelie", "start": "4:09:24" },
+        { "name": "Filament", "start": "4:29:04" }
+      ] },
+      { "twitch": "636327019", "subrefs": [
+        { "name": "Arx Fatalis" },
+        { "name": "Dishonored", "start": "3:15:42" }
+      ] },
+      { "twitch": "639075772", "subrefs": [
+        { "name": "Those Who Remain" },
+        { "name": "Someday You'll Return", "start": "3:11:24" }
+      ] },
+      { "name": "SOLUM", "twitch": "644774531", "start": "4:30:33" },
+      { "name": "The Disappearance of the Mitchels", "twitch": "645734946", "start": "5:15:53" },
+      { "name": "In Sound Mind (демо)", "twitch": "650534841", "start": "1:31:36" },
+      { "twitch": "653411860", "subrefs": [
+        { "name": "Haven" },
+        { "name": "Hardspace: Shipbreaker", "start": "1:53:28" },
+        { "name": "Gloomwood", "start": "2:33:58" },
+        { "name": "Among Trees", "start": "3:59:59" },
+        { "name": "Hello Guest", "start": "5:12:52" }
+      ] },
+      { "name": "SpongeBob SquarePants: Battle for Bikini Bottom — Rehydrated", "twitch": "661040084" },
+      { "twitch": "669777336", "subrefs": [
+        { "name": "Mortal Shell" },
+        { "name": "Fury Unleashed", "start": "3:32:05" }
+      ] },
+      { "name": "Destroy All Humans! (демо)", "twitch": "675494632", "start": "2:44:33" },
+      { "name": "Trackmania", "twitch": "677524120", "start": "1:40:14" },
+      { "name": "Rocket Arena", "twitch": "680344977", "start": "1:54:55" }
+    ]
+  },
+  {
+    "name": "Ghost of Tsushima",
+    "category": "finished",
+    "id": "ghost-of-tsushima",
+    "streams": [
+      { "name": "1", "twitch": "681457263" },
+      { "name": "2", "twitch": "682267155" },
+      { "name": "3", "twitch": "683282462" }
+    ]
+  },
+  {
+    "name": "Far Cry 3",
+    "category": "ongoing",
+    "id": "far-cry-3",
+    "streams": [
+      { "name": "1", "twitch": "678368491" },
+      { "name": "2", "twitch": "679308738" },
+      { "name": "3", "twitch": "680344977" }
+    ]
+  },
+  {
+    "name": "Vampire: The Masquerade - Bloodlines",
+    "category": "ongoing",
+    "id": "vampire-masquerade",
+    "streams": [
+      { "name": "1", "twitch": "659080815" },
+      { "twitch": "660069027", "subrefs": [
+        { "name": "2" },
+        { "name": "2", "start": "4:28:55" }
+      ] },
+      { "name": "3", "twitch": "665878817" }
+    ]
+  },
+  {
+    "name": "The Last of Us: Part II",
+    "category": "finished",
+    "id": "tlou-2",
+    "streams": [
+      { "name": "1", "twitch": "654380816" },
+      { "name": "2.1", "twitch": "655265437" },
+      { "name": "2.2", "twitch": "655528246" },
+      { "name": "3", "twitch": "656257835" }
+    ]
+  },
+  {
+    "name": "Alien: Hope for the Future",
+    "category": "infinite",
+    "id": "alien-hope-for-the-future",
+    "streams": [
+      { "name": "1", "twitch": "629544387", "start": "2:24:26" },
+      { "name": "2", "twitch": "639990705" }
+    ]
+  },
+  {
+    "name": "The Elder Scrolls Online",
+    "category": "infinite",
+    "id": "teso",
+    "streams": [
+      { "name": "0", "twitch": "633403643" },
+      { "name": "1 (со зрителями)", "twitch": "635328249" }
+    ]
+  },
+  {
+    "name": "Mafia II: Definitive Edition",
+    "category": "ongoing",
+    "id": "mafia-2-definitive",
+    "streams": [
+      { "name": "1", "twitch": "625606171", "start": "3:43:13" },
+      { "name": "2", "twitch": "626564087" }
+    ]
+  },
+  {
+    "name": "GeoGuessr",
+    "category": "infinite",
+    "id": "geoguessr",
+    "streams": [
+      { "name": "1", "twitch": "619696167", "start": "4:20:50" },
+      { "name": "2", "twitch": "622728652", "start": "4:02:25" },
+      { "name": "3", "twitch": "626564087", "start": "5:19:20" },
+      { "name": "4", "twitch": "649632498", "start": "3:28:40" },
+      { "name": "5", "twitch": "663976925" }
+    ]
+  },
+  {
+    "name": "SnowRunner",
+    "category": "co-op-series",
+    "id": "snowrunner",
+    "streams": [
+      { "name": "1 (соло)", "twitch": "606017953", "start": "2:00:58" },
+      { "name": "2 (соло)", "twitch": "607002083" },
+      { "name": "3", "twitch": "608001507" },
+      { "name": "4", "twitch": "610027262" },
+      { "twitch": "613793616", "subrefs": [
+        { "name": "5" },
+        { "name": "5", "start": "2:42:38" }
+      ] },
+      { "name": "6", "twitch": "618698350", "start": "58:37" },
+      { "name": "7", "twitch": "623734401", "start": "5:08:04" },
+      { "name": "8", "twitch": "628517071", "start": "5:15:28" },
+      { "name": "9", "twitch": "647860070", "segment": 0, "start": "1:20:09" }
+    ]
+  },
+  {
+    "name": "L.A. Noire",
+    "category": "finished",
+    "id": "la-noire",
+    "streams": [
+      { "name": "1", "twitch": "595537714" },
+      { "name": "2", "twitch": "598326228" },
+      { "name": "3", "twitch": "611858028" },
+      { "name": "4", "twitch": "620631764" },
+      { "name": "5", "twitch": "644774531" },
+      { "name": "6", "twitch": "645734946" },
+      { "name": "7", "twitch": "658127870" }
+    ]
+  },
+  {
+    "name": "Final Fantasy VII Remake",
+    "category": "finished",
+    "id": "ff-vii-remake",
+    "streams": [
+      { "name": "1", "twitch": "587333512" },
+      { "name": "2", "twitch": "588123594" },
+      { "name": "3", "twitch": "589032624" },
+      { "name": "4", "twitch": "589974459" },
+      { "name": "5", "twitch": "590838420" }
+    ]
+  },
+  {
+    "name": "Half-Life: Alyx",
+    "category": "finished",
+    "id": "hl-alyx",
+    "streams": [
+      { "name": "1", "twitch": "573544874", "start": "1:43:41" },
+      { "name": "2", "twitch": "574246616" },
+      { "name": "3", "twitch": "575026259" }
+    ]
+  },
+  {
+    "name": "Resident Evil 3 Remake",
+    "category": "finished",
+    "id": "re3-remake",
+    "streams": [
+      { "name": "Raccoon City Demo (PS4)", "twitch": "570386805" },
+      { "name": "Raccoon City Demo (PC)", "twitch": "572721394", "start": "1:08:02" },
+      { "name": "Прохождение", "twitch": "581326233" }
+    ]
+  },
+  {
+    "name": "Doom Eternal",
+    "category": "finished",
+    "id": "doom-eternal",
+    "streams": [
+      { "twitch": "569683310", "subrefs": [
+        { "name": "1" },
+        { "name": "1", "start": "3:57:54" }
+      ] },
+      { "name": "2", "twitch": "570386805", "start": "1:02:58" },
+      { "name": "3", "twitch": "571133425" }
     ]
   },
   {
@@ -1302,12 +1874,36 @@
   },
   {
     "name": "The Longing",
-    "category": "ongoing",
+    "category": "finished",
     "id": "the-longing",
     "streams": [
-      { "name": "400", "twitch": "563856575", "start": "3:36:11" },
-      { "name": "396-395", "twitch": "564858921" },
-      { "name": "393-392", "twitch": "565405331" }
+      { "twitch": "563856575", "subrefs": [
+        { "name": "1 (400)", "start": "3:36:11" },
+        { "name": "1 (400)", "start": "6:01:02" }
+      ] },
+      { "name": "2 (396-395)", "twitch": "564858921" },
+      { "twitch": "565405331", "subrefs": [
+        { "name": "3 (393-392)" },
+        { "name": "3 (393-392)", "start": "5:39:50" }
+      ] },
+      { "twitch": "567045755", "segment": 1, "subrefs": [
+        { "name": "4 (383-382)" },
+        { "name": "4 (383-382)", "start": "7:27:55" }
+      ] },
+      { "twitch": "567719582", "subrefs": [
+        { "name": "5 (380-379)" },
+        { "name": "5 (380-379)", "start": "4:52:12" }
+      ] },
+      { "name": "6 (372-371)", "twitch": "568999004" },
+      { "name": "7 (350)", "twitch": "572721394", "start": "1:50:07" },
+      { "name": "8 (313-312)", "twitch": "576592201" },
+      { "name": "9 (часть 1, 296)", "twitch": "578269918" },
+      { "name": "9 (часть 2, 296)", "twitch": "578448008", "start": "58:02" },
+      { "name": "10 (276)", "twitch": "579786256", "start": "3:17:20" },
+      { "name": "11 (часть 1, 268)", "twitch": "580574509" },
+      { "name": "11 (часть 2, 267)", "twitch": "580642883" },
+      { "name": "12 (237-236)", "twitch": "583080179" },
+      { "name": "13 (финал, 235)", "twitch": "583958350" }
     ]
   },
   {
@@ -1346,7 +1942,11 @@
     "streams": [
       { "name": "Бета", "twitch": "502940448", "start": "1:00:00" },
       { "name": "Демо 1", "twitch": "559121361", "start": "3:17:02" },
-      { "name": "Демо 2", "twitch": "559668833", "start": "4:33:34" }
+      { "name": "Демо 2", "twitch": "559668833", "start": "4:33:34" },
+      { "name": "1", "twitch": "566459252" },
+      { "name": "2", "twitch": "567045755", "segment": 0 },
+      { "name": "3", "twitch": "567719582", "start": "2:01:22" },
+      { "name": "4", "twitch": "568999004" }
     ]
   },
   {
@@ -1388,7 +1988,8 @@
       { "name": "4", "twitch": "557620811", "start": "4:57:47" },
       { "name": "5", "twitch": "560235613" },
       { "name": "6", "twitch": "562741500", "start": "1:01:36" },
-      { "name": "7", "twitch": "563294076" }
+      { "name": "7", "twitch": "563294076" },
+      { "name": "8 (заново)", "twitch": "669777336", "start": "3:56:41" }
     ]
   },
   {
@@ -1416,14 +2017,16 @@
   },
   {
     "name": "Dead Space 3",
-    "category": "ongoing",
+    "category": "finished",
     "id": "dead-space-3",
     "streams": [
       { "name": "1", "twitch": "549258537", "start": "2:56:20" },
       { "name": "2", "twitch": "550299037" },
       { "name": "3", "twitch": "551290502" },
       { "name": "4", "twitch": "556030369" },
-      { "name": "5", "twitch": "562243368", "start": "1:22:17" }
+      { "name": "5", "twitch": "562243368", "start": "1:22:17" },
+      { "name": "6", "twitch": "593579171" },
+      { "name": "DLC: Awakened", "twitch": "594489443" }
     ]
   },
   {
@@ -1442,7 +2045,9 @@
     "streams": [
       { "name": "1", "twitch": "535873254" },
       { "name": "2", "twitch": "543096330", "start": "2:02:44" },
-      { "name": "3", "twitch": "548170121", "start": "2:04:20" }
+      { "name": "3", "twitch": "548170121", "start": "2:04:20" },
+      { "name": "4", "twitch": "607002083", "start": "44:54" },
+      { "name": "5", "twitch": "623734401", "start": "3:42:56" }
     ]
   },
   {
@@ -1506,6 +2111,17 @@
       { "name": "1", "twitch": "521837299", "start": "4:27:23" },
       { "name": "2", "twitch": "523121734" },
       { "name": "3", "twitch": "525744926" }
+    ]
+  },
+  {
+    "name": "Metal Gear Solid 4: Guns of the Patriots",
+    "category": "finished",
+    "id": "mgs-4",
+    "streams": [
+      { "name": "0 (тест эмулятора)", "twitch": "526101430" },
+      { "name": "1", "twitch": "614769111" },
+      { "name": "2", "twitch": "615757437" },
+      { "name": "3", "twitch": "616784129" }
     ]
   },
   {
@@ -1591,7 +2207,8 @@
       { "name": "1", "twitch": "505477026" },
       { "name": "2", "twitch": "505944491" },
       { "name": "3", "twitch": "506424196" },
-      { "name": "4", "twitch": "506857937" }
+      { "name": "4", "twitch": "506857937" },
+      { "name": "1 (заново, PC)", "twitch": "679308738", "start": "2:13:34" }
     ]
   },
   {
@@ -1727,11 +2344,15 @@
   },
   {
     "name": "Green Hell",
-    "category": "ongoing",
+    "category": "co-op-series",
     "id": "green-hell",
     "streams": [
-      { "name": "0 (бета)", "twitch": "305785431" },
-      { "name": "1", "twitch": "479926128" }
+      { "name": "Бета (соло)", "twitch": "305785431" },
+      { "name": "Релиз (соло)", "twitch": "479926128" },
+      { "name": "1", "twitch": "586412927", "start": "3:33:11" },
+      { "name": "2", "twitch": "602384829" },
+      { "name": "3", "twitch": "612822436", "start": "3:04:15" },
+      { "name": "4 (сюжет)", "twitch": "684388398" }
     ],
     "cover": 1
   },
@@ -1897,6 +2518,15 @@
       { "name": "Со зрителями", "twitch": "483098038" }
     ],
     "cover": 1
+  },
+  {
+    "name": "Mortal Kombat 11: Aftermath",
+    "category": "finished",
+    "id": "mk-11-aftermath",
+    "streams": [
+      { "name": "Прохождение", "twitch": "632445518", "start": "2:59:03" },
+      { "name": "Контент", "twitch": "633403643", "start": "37:01" }
+    ]
   },
   {
     "name": "Totally Accurate Battle Simulator",
@@ -2174,7 +2804,10 @@
         "name": "Episode 3", "twitch": "456859112",
         "note": "Второй эпизод доступен на <a href=\"https://youtu.be/X84LY_NZdFw\">YouTube</a>."
       },
-      { "name": "Episode 4 / Episode 5", "twitch": "532787117" }
+      { "twitch": "532787117", "subrefs": [
+        { "name": "Episode 4" },
+        { "name": "Episode 5", "start": "3:28:22" }
+      ] }
     ]
   },
   {
@@ -2319,7 +2952,10 @@
     "id": "wreckfest",
     "streams": [
       { "name": "1", "twitch": "276648637" },
-      { "name": "2", "twitch": "278566845", "segment": 1 }
+      { "name": "2", "twitch": "278566845", "segment": 1 },
+      { "name": "3", "twitch": "676500778", "start": "58:38" },
+      { "name": "4", "twitch": "677524120", "start": "2:00:30" },
+      { "name": "5", "twitch": "678368491", "start": "5:15:33" }
     ]
   },
   {
@@ -2655,7 +3291,10 @@
     "id": "vod",
     "streams": [
       { "name": "Manual Samuel (2016)", "twitch": "296515241" },
-      { "name": "Dungeon Nightmares II: The Memory / Root of Evil: The Tailor (2016, с Дашей)", "twitch": "296680707" }
+      { "twitch": "296680707", "subrefs": [
+        { "name": "Dungeon Nightmares II: The Memory (2016)" },
+        { "name": "Root of Evil: The Tailor (с Дашей)", "start": "1:33:07" }
+      ] }
     ]
   }
 ]

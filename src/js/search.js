@@ -1,11 +1,15 @@
 import autocomplete from 'autocompleter';
 import { Data } from './data';
+import { Redirect } from './redirect';
 
 class Search {
   static games = null;
 
   static strip(string) {
-    return string.trim().toLowerCase().match(/[a-zа-я0-9]+/gi).join(' ');
+    return string.trim().split(' ').map((word) => {
+      let match = word.toLowerCase().match(/[a-zа-я0-9]+/g);
+      return match ? match.join('') : '';
+    }).join(' ');
   }
 
   static async load() {
@@ -27,11 +31,27 @@ class Search {
   static async init(selector) {
     let games = await Search.load();
 
+    await Redirect.init();
+    let segments = Object.keys(Redirect.segments);
+
     return autocomplete({
       minLength: 2,
       input: document.querySelector(selector),
       fetch: (text, update) => {
         text = Search.strip(text);
+
+        if (segments.indexOf(text) !== -1) {
+          update(segments.filter((key) => key.startsWith(text)).map((key) => {
+            let segment = Redirect.segments[key];
+            return {
+              name: segment.name,
+              group: 'Переход по ID',
+              url: segment.url
+            };
+          }));
+          return;
+        }
+
         let suggestions = games.filter((x) => {
           if (text.indexOf(' ') != -1) {
             return Search.strip(x.name).indexOf(text) != -1;
@@ -40,11 +60,14 @@ class Search {
             return words.filter(y => y.startsWith(text)).length > 0;
           }
         });
+
         update(suggestions);
       },
       render: (item, currentValue) => {
         let div = document.createElement("div");
-        div.innerHTML = item.name + ' - <span>' + item.year + '</span>';
+        let html = item.name;
+        if (item.year) { html += ' - <span>' + item.year + '</span>'; }
+        div.innerHTML = html;
         return div;
       },
       onSelect: (item) => {

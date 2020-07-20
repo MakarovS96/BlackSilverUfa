@@ -11,6 +11,9 @@ export MASTER_BRANCH_REMOTE="master"
 export PAGES_BRANCH_LOCAL="gh-pages"
 export PAGES_BRANCH_REMOTE="gh-pages"
 
+# Specified version must have builds for musl libc at
+# https://unofficial-builds.nodejs.org/download/release/
+NODE_VERSION="14.2.0"
 
 venv_setup() { # filename [force | silent]
     MD5_FILE="$VENV/$1.md5"
@@ -45,10 +48,8 @@ node_setup() { # [force | silent]
         rm "$MD5_FILE"
     fi
 
-    if [ ! -d "$NODEENV" ]; then
-        # Specified version must have builds for musl libc at
-        # https://unofficial-builds.nodejs.org/download/release/
-        nodeenv -n '13.8.0' "$NODEENV" || exit 1
+    if [ ! -d "$NODEENV" ] || [ "$(node -v)" != "v$NODE_VERSION" ]; then
+        nodeenv --force -n "$NODE_VERSION" "$NODEENV" || exit 1
     fi
 
     if [ -e "$MD5_FILE" ] && md5sum -c "$MD5_FILE" > /dev/null 2>&1; then
@@ -114,7 +115,7 @@ case $1 in
                     venv_setup cli-requirements.txt $3
                 fi
                 node_setup ;;
-            remove) rm -r "$VENV" ;;
+            remove) rm -rf "$VENV" "$NODEENV" "node_modules" ;;
             *) echo "Usage: $0 $1 update|remove" ;;
         esac ;;
     pages)
@@ -163,11 +164,11 @@ case $1 in
         fi
 
         ./bsu pages pull ;;
-    build) $PYTHON -m src.utils.generate ;;
-    serve) $PYTHON -m src.utils.serve ;;
-    debug) DEBUG=1 $PYTHON -m src.utils.serve ;;
+    build) shift; $PYTHON -m src.utils.generate $@ ;;
+    serve) shift; $PYTHON -m src.utils.serve $@ ;;
+    debug) shift; DEBUG=1 $PYTHON -m src.utils.serve $@ ;;
     download-chats) $PYTHON -m src.utils.chats ;;
-    sh|bash) $@ ;;
+    sh|bash) "$@" ;;
     cli)
         shift
         venv_setup cli-requirements.txt silent
@@ -177,5 +178,5 @@ case $1 in
     python) shift; $PYTHON $@ ;;
     pip) shift; $PYTHON -m pip $@ ;;
     npm) shift; npm $@ ;;
-    *) echo "Usage: $0 venv|pages|pull|build|serve|download-chats|sh|repl|script|python" ;;
+    *) echo "Usage: $0 venv|pages|pull|build|serve|download-chats|sh|bash|repl|script|python" ;;
 esac

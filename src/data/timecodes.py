@@ -38,7 +38,7 @@ class Timecode(object):
             return ('-' if negative else '') + '0:' + str(s).zfill(2)
 
         result = []
-        for i in [24*60*60, 60*60, 60, 1]:  # days, hours, minutes, seconds
+        for i in [60*60, 60, 1]:  # hours, minutes, seconds
             if s // i > 0 or len(result) > 0:
                 if len(result) == 0:
                     result.append(str(s // i))
@@ -69,6 +69,8 @@ class Timecode(object):
                 self.value = self._text_to_sec(timecode)
         elif type(timecode) is int:
             self.value = timecode
+        elif type(timecode) is float:
+            self.value = int(timecode)
         elif type(timecode) is Timecode:
             self.value = timecode.value
             self.duration = timecode.duration
@@ -231,12 +233,13 @@ class TimecodesSlice(Timecodes):
 
                 if not left and not right:
                     continue
-
-                if left and not right:  # start only
+                elif left and not right:  # start only
                     t = Timecode(t.value, t.name)
-
-                if not left and right:  # end only
-                    t = Timecode(t.value + duration, t.name)
+                elif not left and right:  # end only
+                    t = Timecode(t.value + duration, t.name) 
+                elif t.duration: # both ends
+                    delta = self.segment.offset(t + t.duration) - self.segment.offset(t)
+                    t.duration -= delta.value
 
                 ts.add(t - self.segment.offset(t))
 

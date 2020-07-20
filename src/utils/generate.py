@@ -1,3 +1,6 @@
+"""Usage: build [--no-webpack]"""
+
+
 import os
 import sys
 import json
@@ -7,6 +10,7 @@ from subprocess import call
 from multiprocessing import cpu_count
 from multiprocessing.pool import ThreadPool
 
+from docopt import docopt
 from mako.lookup import TemplateLookup
 from sortedcontainers import SortedDict
 
@@ -57,8 +61,7 @@ def build_data():
             tc_dict[segment.hash] = segment.timecodes.to_dict()
 
         # Generate cut subtitles
-        if len(segment.cuts) > 0:
-            cut_subtitles(segment)
+        cut_subtitles(segment)
 
     with open(_('data/timecodes.json'), 'w') as fo:
         json.dump(tc_dict, fo, ensure_ascii=False, indent=2)
@@ -125,7 +128,9 @@ def build_webpack():
 
 
 @timed('Build completed in {}ms')
-def generate():
+def generate(argv=None):
+    args = docopt(__doc__, argv=argv)
+
     load_database()
     enable_fallbacks()
 
@@ -140,12 +145,10 @@ def generate():
         shutil.rmtree(_('static'))
     shutil.copytree('static', _('static'))
 
-    p = ThreadPool(min(cpu_count(), 3))
-    p.apply_async(build_data)
-    p.apply_async(build_webpack)
-    p.apply_async(build_mako)
-    p.close()
-    p.join()
+    build_data()
+    if not args['--no-webpack']:
+        build_webpack()
+    build_mako()
 
 
 if __name__ == '__main__':
