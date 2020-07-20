@@ -45,7 +45,7 @@ class Category:
             keys = ['name', 'description', 'code',
                     'level', 'search', 'split_by_year']
         else:
-            keys = ['name', 'description', 'search', 'split_by_year']
+            keys = ['name', 'description', 'code', 'search', 'split_by_year']
 
         fields = attr.fields_dict(type(self))
 
