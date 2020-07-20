@@ -19,5 +19,12 @@
 
 <%stats:statistics />
 
-<div id="segments-grid-root"></div>
+<div id="segments-grid-root">
+  <noscript>
+    <div class="text-center">
+      <h1>Ошибка!</h1>
+      <p>Для работы сайта требуется JavaScript</p>
+    </div>
+  </noscript>
+</div>
 </%block>

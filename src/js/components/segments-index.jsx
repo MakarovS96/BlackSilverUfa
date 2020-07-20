@@ -265,8 +265,8 @@ class SegmentsIndex extends React.Component {
   error() {
     return (
       <div className="text-center">
-        <h3>Ошибка!</h3>
-        <p>Не удалось загрузить категории :(</p>
+        <h1>Ошибка!</h1>
+        <p>Не удалось загрузить категории</p>
         <button
           type="button"
           className="btn btn-primary"
