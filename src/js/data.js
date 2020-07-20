@@ -4,17 +4,17 @@ class Data {
   static _segments = null;
 
   static async segments() {
-    if (Data._segments != null) return Data._segments;
-    let data = await fetch('/data/segments.json').then((res) => res.json());
-    Data._segments = data;
-    return data;
+    if (Data._segments == null) {
+      Data._segments = fetch('/data/segments.json').then((res) => res.json());
+    }
+    return Data._segments;
   }
 
   static async categories() {
-    if (Data._categories != null) return Data._categories;
-    let data = await fetch('/data/categories.json').then((res) => res.json());
-    Data._categories = data;
-    return data;
+    if (Data._categories == null) {
+      Data._categories = fetch('/data/categories.json').then((res) => res.json());
+    }
+    return Data._categories;
   }
 }
 
